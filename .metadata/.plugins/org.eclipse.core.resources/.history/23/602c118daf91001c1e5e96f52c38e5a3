@@ -1,0 +1,15 @@
+package morseCode;
+
+import javax.swing.*;
+
+public class Controller {
+	private View view;
+	private Model model;
+	
+	public Controller() {
+		model = new Model();
+		model.addPropertyChangeListener(this);
+		view = new View();
+		this.add(view);
+	}
+}

@@ -1,0 +1,21 @@
+package morseCode;
+
+
+import java.beans.PropertyChangeListener;
+
+import javax.swing.*;
+
+public class View extends JPanel {
+	public JTextField textField;
+	
+
+	public  View() {	
+		textField = new JTextField(20);
+		textField.addPropertyChangeListener("value", new PropertyChangeListener());
+		this.add(textField);
+	}
+	public void setText(String text) {
+		textField.setText(text);
+	}
+	
+}

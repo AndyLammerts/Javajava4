@@ -1,0 +1,18 @@
+package morseCode;
+
+import java.awt.GridLayout;
+
+import javax.swing.*;
+
+public class View extends JPanel {
+	public JTextField textField;
+	
+	public View() {
+		
+		textField = new JTextField();
+		this.add(textField);
+	}
+	public void setText(String text) {
+		textField.setText(text);
+	}
+}

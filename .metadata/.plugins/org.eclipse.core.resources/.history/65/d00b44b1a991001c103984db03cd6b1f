@@ -1,0 +1,7 @@
+package morseCode;
+
+public class Runner {
+	JFrame frame = new JFrame("Eindopdracht Java 4 - Andy Lammerts");
+	frame.setSize(400, 400);
+	Controller controller = new Controller();
+}

@@ -1,0 +1,14 @@
+package morseCode;
+
+import javax.swing.*;
+import morseCode.Model;
+import morseCode.View;
+
+public class Controller {
+
+	public Controller() {
+		model = new Model();
+		view = new View();
+		this.add(view);
+	}
+}

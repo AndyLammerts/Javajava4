@@ -1,0 +1,16 @@
+package morseCode;
+
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
+
+public class Model {
+	private final PropertyChangeSupport pcs = new PropertyChangeSupport(this);
+	
+	 public void addPropertyChangeListener(PropertyChangeListener listener) {
+         this.pcs.addPropertyChangeListener(listener);
+     }
+	 
+	 public void setMorse {
+		 
+	 }
+}

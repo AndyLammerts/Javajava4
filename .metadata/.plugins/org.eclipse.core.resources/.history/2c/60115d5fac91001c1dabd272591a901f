@@ -1,0 +1,9 @@
+package morseCode;
+
+public class Model {
+	private final PropertyChangeSupport pcs = new PropertyChangeSupport(this);
+	
+	 public void addPropertyChangeListener(PropertyChangeListener listener) {
+         this.pcs.addPropertyChangeListener(listener);
+     }
+}

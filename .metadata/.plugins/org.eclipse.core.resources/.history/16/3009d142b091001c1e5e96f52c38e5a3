@@ -1,0 +1,12 @@
+package morseCode;
+
+import javax.swing.*;
+
+public class View extends JPanel {
+	public textField;
+	
+	public View() {
+		textField = new JTextField();
+		this.add(textField);
+	}
+}
