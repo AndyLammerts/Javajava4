@@ -2,18 +2,34 @@ package morseCode;
 
 
 
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+
 import javax.swing.*;
 
-public class View extends JPanel {
+public class View extends JPanel implements PropertyChangeListener {
 	public JTextField textField;
+	public JLabel label;
 	
 
-	public  View() {	
+	public View() {
+		Controller controller = new Controller();
+		controller.addPropertyChangeListener(this);
 		textField = new JTextField(20);
 		this.add(textField);
+		label = new JLabel();
+		this.add(label);
 	}
-	public void setText(String text) {
-		textField.setText(text);
+	
+	
+	public void addPropertyChangeListener(PropertyChangeListener listener) {
+		 this.addPropertyChangeListener(listener);
+		 }
+	
+	
+	@Override
+	public void propertyChange(PropertyChangeEvent evt) {
+		
 	}
 	
 }

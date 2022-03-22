@@ -1,9 +1,0 @@
-package morseCode;
-
-import javax.swing.JFrame;
-import morseCode.Controller;
-
-public class Runner {
-		JFrame frame = new JFrame("Eindopdracht Java 4 -- 124131");
-		Controller controller = new Controller();
-	}

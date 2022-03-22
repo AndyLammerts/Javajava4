@@ -2,21 +2,26 @@ package morseCode;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
+
 import javax.swing.*;
 
-public class Controller extends JPanel implements PropertyChangeListener {
-	private View view;
-	private Model model;
+public class Controller  {
+	 Model model = new Model();
+	PropertyChangeSupport pcs;
 	
 	public Controller() {
-		model = new Model();
-		model.addPropertyChangeListener(this);
-		view = new View();
-		this.add(view);
+		pcs = new PropertyChangeSupport(this);
 	}
-
-	@Override
-	public void propertyChange(PropertyChangeEvent evt) {
+	
+	public void setMorse(String textField) {
+		model.setText(textField);
+		String result = model.getMorse();
 		
+		pcs.firePropertyChange("textInput", textField, result);
+	}
+	
+	public void addPropertyChangeListener(View view) {
+		pcs.addPropertyChangeListener(view);
 	}
 }
