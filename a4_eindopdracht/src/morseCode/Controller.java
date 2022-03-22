@@ -24,4 +24,5 @@ public class Controller  {
 	public void addPropertyChangeListener(View view) {
 		pcs.addPropertyChangeListener(view);
 	}
+	
 }

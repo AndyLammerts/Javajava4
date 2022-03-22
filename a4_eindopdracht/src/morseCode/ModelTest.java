@@ -8,7 +8,9 @@ class ModelTest {
 
 	@Test
 	void testLeeg() {
-		fail("Not yet implemented");
+		Model model = new Model();
+		model.setText("");
+		assertEquals("", model.getText());
 	}
 	
 	@Test
@@ -16,24 +18,27 @@ class ModelTest {
 		Model model = new Model();
 		model.setText( "s");
 		assertEquals("S", model.getText());
-//		fail("Not yet implemented");
 	}
 	
 	@Test
 	void testEenLetter() {
 		Model model = new Model();
-		model.setText("s");
-		assertEquals("...", model.getMorse());
+		
+		assertEquals("...", model.convertChar("S"));
 	}
 	
 	@Test
 	void testTekst() {
-		fail("Not yet implemented");
+		Model model = new Model();
+		model.setText("SSS");
+		assertEquals("... ... ...", model.getMorse());
 	}
-	
+		
 	@Test
 	void testSpatie() {
-		fail("Not yet implemented");
+		Model model = new Model();
+		model.setText(" ");
+		assertEquals("/", model.getMorse());
 	}
 	
 	@Test
