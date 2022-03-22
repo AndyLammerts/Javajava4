@@ -1,0 +1,21 @@
+package morseCode;
+
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
+
+import javax.swing.*;
+
+public class Controller extends JPanel  {
+	View view = new View();
+	 Model model = new Model();
+	PropertyChangeSupport pcs;
+	
+	public Controller() {
+		pcs = new PropertyChangeSupport(this);
+	}
+	
+	public void setMorse(String textInput) {
+		String result = model.toUpperCase(textInput);
+	}
+}

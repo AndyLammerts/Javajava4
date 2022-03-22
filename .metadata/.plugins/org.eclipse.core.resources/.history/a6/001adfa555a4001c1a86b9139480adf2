@@ -1,0 +1,20 @@
+package morseCode;
+
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
+
+import javax.swing.*;
+
+public class Controller extends JPanel  {
+	private View view;
+	private Model model;
+	PropertyChangeSupport pcs;
+	
+	public Controller() {
+		model = new Model();
+		pcs = new PropertyChangeSupprt(this);
+		view = new View();
+		this.add(view);
+	}
+}
