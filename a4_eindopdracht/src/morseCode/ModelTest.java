@@ -24,20 +24,20 @@ class ModelTest {
 	void testEenLetter() {
 		Model model = new Model();
 		
-		assertEquals("...", model.convertChar("S"));
+		assertEquals("...", model.convertChar('s'));
 	}
 	
 	@Test
 	void testTekst() {
 		Model model = new Model();
-		model.setText("SSS");
+		model.setText("s");
 		assertEquals("... ... ...", model.getMorse());
 	}
 		
 	@Test
 	void testSpatie() {
 		Model model = new Model();
-		model.setText(" ");
+		model.setText("");
 		assertEquals("/", model.getMorse());
 	}
 	

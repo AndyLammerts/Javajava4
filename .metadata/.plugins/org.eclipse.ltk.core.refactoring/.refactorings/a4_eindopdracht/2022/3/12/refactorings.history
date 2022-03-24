@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Change method &apos;public String morseCode.Model.convertChar(char string)&apos; to &apos;public String convertChar(char string)&apos;&#x0D;&#x0A;- Original project: &apos;a4_eindopdracht&apos;&#x0D;&#x0A;- Original element: &apos;morseCode.Model.convertChar(...)&apos;&#x0D;&#x0A;- Changed parameters:&#x0D;&#x0A;     String string" delegate="false" deprecate="true" description="Change method &apos;convertChar&apos;" flags="589830" id="org.eclipse.jdt.ui.change.method.signature" input="/src&lt;morseCode{Model.java[Model~convertChar~QString;" name="convertChar" parameter1="String string 0 char string false" stamp="1648113949567" version="1.0"/>
+</session>

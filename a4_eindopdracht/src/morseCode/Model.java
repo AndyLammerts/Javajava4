@@ -8,7 +8,7 @@ public class Model {
             {"A",".-"}, {"B","-..."}, {"C","-.-."},{"D","-.."},
             {"E","."}, {"F","..-."}, {"G","--."}, {"H","...."},
             {"I",".."}, {"J",".---"},{"K","-.-"}, {"L",".-.."}, {"M","--"},
-            {"N","-."}, {"O","---"}, {"P",".--."}, {"Q","--.-"},00
+            {"N","-."}, {"O","---"}, {"P",".--."}, {"Q","--.-"},
             {"R",".-."},{"S","..."}, {"T","-"}, {"U","..-"},
             {"V","	...-"}, {"W",".--"}, {"X","-..-"}, {"Y","-.--"},
             {"Z","--.."},{"1",".----"},{"2","..---"},{"3","...--"},
@@ -28,7 +28,9 @@ public class Model {
 	 public String getMorse() {
 		 String result = "";
 		 //tekst uit elkaar plukken en morse van maken
-		 
+		 for(int i = 0; i < text.length(); i++) {
+			 result += text.charAt(i);
+		 }
 		 return result;
 	 }
 
@@ -40,7 +42,7 @@ public class Model {
 		return text;
 	}
 
-	public String convertChar(String string) {
+	public String convertChar(char string) {
 		return ht.get(string);
 	}
 }
