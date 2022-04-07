@@ -1,0 +1,17 @@
+package morseCode;
+
+import java.awt.GridLayout;
+
+import javax.swing.JFrame;
+import morseCode.Controller;
+
+public class Runner {
+	public static void main(String[] args) {
+	JFrame frame = new JFrame("Eindopdracht Java 4");
+	frame.setSize(400, 400);
+	Controller controller = new Controller();
+	GridLayout experimentLayout = new GridLayout(2,0);
+	frame.add(new View());	
+	frame.setVisible(true);
+	}
+}

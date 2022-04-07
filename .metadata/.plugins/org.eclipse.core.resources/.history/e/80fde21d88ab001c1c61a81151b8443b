@@ -1,0 +1,23 @@
+package morseCode;
+
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+import morseCode.Controller;
+
+public class Runner {
+	public static void main(String[] args) {
+	JFrame frame = new JFrame("Eindopdracht Java 4");
+	frame.setSize(400, 400);
+	Controller controller = new Controller();
+	 JPanel panel = new JPanel();
+	 panel.setLayout(new GridLayout(2,1));
+	 frame.add(panel,BorderLayout.CENTER);
+	 frame.pack();
+	 frame.add(new View());	
+	frame.setVisible(true);
+	}
+}

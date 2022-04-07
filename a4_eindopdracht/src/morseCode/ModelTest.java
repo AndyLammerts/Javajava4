@@ -30,20 +30,21 @@ class ModelTest {
 	@Test
 	void testTekst() {
 		Model model = new Model();
-		model.setText("s");
-		assertEquals("... ... ...", model.getMorse());
+		model.setText("sss");
+		assertEquals("... ... ... ", model.getMorse());
 	}
 		
 	@Test
 	void testSpatie() {
 		Model model = new Model();
 		model.setText("");
-		assertEquals("/", model.getMorse());
+		assertEquals("/", model.convertChar(' '));
 	}
 	
 	@Test
 	void testFoutKarakter() {
-		fail("Not yet implemented");
+		Model model = new Model();
+		assertEquals("Dit teken is niet beschikbaar", model.convertChar('@'));
 	}
 
 	
